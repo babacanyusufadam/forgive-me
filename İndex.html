@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Forgive Me</title>
+  <style> ... /* önceki CSS kodu */ ... </style>
+</head>
+<body>
+  <h1>Will you forgive me? 😢</h1>
+  <button class="button yes" onclick="yesClicked()">YES 💚</button>
+  <button class="button no" onclick="nextStep()">Are you sure? ❌</button>
+
+  <div id="message"></div>
+  <div id="yesFinal"> ... /* final ekran */ ... </div>
+
+  <script>
+    let step = 0;
+    function yesClicked() { alert("Yaaay! I love you 💖"); }
+    function nextStep() {
+      const msg = document.getElementById("message");
+      step++;
+      if (step === 1) msg.innerText = "Pleaseeeee 🥺";
+      else if (step === 2) msg.innerText = "Come on, think about it 😔";
+      else if (step === 3) document.getElementById("yesFinal").style.display = "flex";
+    }
+    function finalYes() { alert("Okay! We’re back together 💘"); }
+  </script>
+</body>
+</html>
